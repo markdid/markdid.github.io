@@ -7,6 +7,7 @@ import PortfolioList from "../components/list-portfolio";
 import BlogList from "../components/list-blog";
 import Contact from "../components/contact";
 import "../style/wall.less";
+//cloudinary
 
 class IndexPage extends React.Component {
     constructor(props) {
@@ -94,8 +95,8 @@ class IndexPage extends React.Component {
                                 <pattern
                                     id="wallPattern"
                                     patternUnits="userSpaceOnUse"
-                                    width="400"
-                                    height="200"
+                                    width="100"
+                                    height="50"
                                 >
                                     <rect
                                         x="0"
@@ -105,12 +106,12 @@ class IndexPage extends React.Component {
                                         height="100"
                                     />
                                     <image
-                                        xlinkHref="/images/ocean.jpg"
+                                        xlinkHref="https://res.cloudinary.com/markdid/image/fetch/q_auto,f_auto/https://markdid.github.io/images/ocean.jpg"
                                         height="50"
                                         width="100"
                                         y="0"
-                                        preserveAspectRatio="none"
-                                    ></image>
+                                        preserveAspectRatio="none">
+                                    </image>
                                 </pattern>
                                 <text
                                     fill="url(#wallPattern)"
@@ -130,18 +131,19 @@ class IndexPage extends React.Component {
                             {this.props.data.site.siteMetadata.introTag}
                         </p>
                         <p className="caption text-tertiary">
-                            {this.props.data.site.siteMetadata.description}
+                            I made this site to show I can develop things. And create things. 👍
                         </p>
-                        {/*<a href="#portfolio" className="btn">*/}
-                        {/*    SEE MY STUFF*/}
-                        {/*</a>*/}
+                        <a href="https://github.com/markdid" className="btn">
+                            SEE MY STUFF
+                        </a>
+                    {/*    replace above with Link component for portfolio*/}
                     </div>
                     <div className="social-buttons">
                         <SocialLinks />
                     </div>
                 </div>
                 {/*<PortfolioList />*/}
-                {/*<BlogList />*/}
+                <BlogList />
                 {/*<Contact />*/}
             </Layout>
         );

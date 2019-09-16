@@ -5,7 +5,7 @@ let siteMetadata = {
     icon: `/images/icon.png`,
     titleImage: `/images/wall.jpg`,
     introTag: `DEVELOPER | CREATOR`,
-    description: `I made this website to show I can develop things. And create things. Coming soon...`,
+    description: `Mark Did developer portfolio and blog. Currently focusing on React JS and React Native`,
     author: `@markdid`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
@@ -45,24 +45,19 @@ let siteMetadata = {
     ],
     social: [
         {
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "#"
-        },
-        {
             name: "Twitter",
             icon: "/images/Twitter.svg",
-            url: "#"
+            url: "https://twitter.com/_markdid"
         },
         {
             name: "Instagram",
             icon: "/images/Instagram.svg",
-            url: "#"
+            url: "https://www.instagram.com/_markdid/"
         },
         {
             name: "Youtube",
             icon: "/images/Youtube.svg",
-            url: "#"
+            url: "https://www.youtube.com/channel/UCj__cqxqkDL-E_mpjoqkIFg"
         }
     ],
     contact: {
@@ -82,9 +77,50 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-react-helmet`,
         {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "UA-148085757-1",
+                // Defines where to place the tracking script - `true` in the head and `false` in the body
+                head: true,
+                // Setting this parameter is optional
+                anonymize: true,
+                // Setting this parameter is also optional
+                respectDNT: true,
+                // Avoids sending pageview hits from custom paths
+                exclude: ["/preview/**", "/do-not-track/me/too/"],
+                // Delays sending pageview hits on route update (in milliseconds)
+                pageTransitionDelay: 0,
+                // Enables Google Optimize using your container Id
+                // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+                // Enables Google Optimize Experiment ID
+                // experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+                // Set Variation ID. 0 for original 1,2,3....
+                // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+                // Any additional optional fields
+                // sampleRate: 5,
+                // siteSpeedSampleRate: 10,
+                // cookieDomain: "example.com",
+            },
+        },
+        {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
+                    {
+                        resolve: `gatsby-transformer-remark`,
+                        options: {
+                            plugins: [
+                                `gatsby-remark-emoji`,  // <-- this line adds emoji
+                                {
+                                    resolve: "gatsby-remark-embed-youtube",
+                                    options: {
+                                        width: 800,
+                                        height: 400
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     "gatsby-remark-copy-linked-files",
                     {
                         resolve: `gatsby-remark-images`,

@@ -15,18 +15,18 @@ function ListItem(props) {
             {({ location }) => {
                 return (
                     <li>
-                        {/*<Link*/}
-                        {/*    to={data.url}*/}
-                        {/*    {...anchorAttrs}*/}
-                        {/*    className={*/}
-                        {/*        "/" + location.pathname.split("/")[1] ===*/}
-                        {/*        data.url*/}
-                        {/*            ? "active"*/}
-                        {/*            : ""*/}
-                        {/*    }*/}
-                        {/*>*/}
-                        {/*    <span>{data.name}</span>*/}
-                        {/*</Link>*/}
+                        <Link
+                            to={data.url}
+                            {...anchorAttrs}
+                            className={
+                                "/" + location.pathname.split("/")[1] ===
+                                data.url
+                                    ? "active"
+                                    : ""
+                            }
+                        >
+                            <span>{data.name}</span>
+                        </Link>
                     </li>
                 );
             }}

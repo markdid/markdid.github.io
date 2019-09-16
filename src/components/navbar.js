@@ -16,9 +16,9 @@ function SidebarContents() {
                     <Logo />
                 </Link>
             </div>
-            {/*<div className="links text-secondary">*/}
-            {/*    <NavLinks />*/}
-            {/*</div>*/}
+            <div className="links text-secondary">
+                <NavLinks />
+            </div>
             <div className="social-links">
                 <SocialLinks />
             </div>
@@ -125,8 +125,8 @@ class Navbar extends React.Component {
                         className="navbar-placeholder"
                         style={{
                             height: this.state.navbarPlaceholderHeight + "px"
-                        }}
-                    ></div>
+                        }}>
+                    </div>
                 )}
             </React.Fragment>
         );

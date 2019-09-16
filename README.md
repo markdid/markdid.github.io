@@ -1,4 +1,4 @@
-# Gatsby Starter Elemental
+#Forked from Gatsby Starter Elemental
 
 ![](https://img.shields.io/badge/version-1.1.1-green.svg) ![](https://img.shields.io/badge/License-MIT-orange.svg)
 

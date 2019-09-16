@@ -1,10 +1,11 @@
 ---
 title: About
 template: basepage
-image: ./image.png
+image: ./strollin.webp
 ---
+<p style="text-align: center;">(me)</p>
 
-This is freaking lit yall
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+####Why does this site exist??
+I'm wondering the same thing. For one because I wanted to try out gatsby js. Also becuase it's the hip thing to do.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I'm currently a computer science student at BYU. I work as a web developer using mostly React js, Node, Express js and feathers js. I've been programming for about 8 years but only started web development in late 2018. If you want to hire me, send me a message!
