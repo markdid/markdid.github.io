@@ -28,10 +28,6 @@ let siteMetadata = {
             name: "PORTFOLIO",
             url: "/portfolio"
         },
-        {
-            name: "CONTACT",
-            url: "/contact"
-        }
     ],
     footerLinks: [
         {
@@ -79,7 +75,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "UA-148085757-1",
+                trackingId: "UA-148325597-1",
                 // Defines where to place the tracking script - `true` in the head and `false` in the body
                 head: true,
                 // Setting this parameter is optional

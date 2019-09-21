@@ -1,4 +1,5 @@
 import React from "react";
+import Bulb from "./../../static/images/bulbicon.svg";
 
 export const Calendar = function() {
     return (
