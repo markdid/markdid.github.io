@@ -6,7 +6,7 @@ function ListItem(props) {
     return (
         <li>
             <a href={data.url} title={data.name}>
-                <img src={data.icon} alt={data.name} />
+                <img src={data.icon} alt={data.name} style={{maxHeight: "48px"}}/>
             </a>
         </li>
     );

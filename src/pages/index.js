@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import SocialLinks from "../components/sociallinks";
 import PortfolioList from "../components/list-portfolio";
@@ -133,9 +133,10 @@ class IndexPage extends React.Component {
                         <p className="caption text-tertiary">
                             I made this site to show I can develop things. And create things. 👍
                         </p>
-                        <a href="https://github.com/markdid" className="btn">
+                        {/* <a href="https://github.com/markdid" className="btn">
                             SEE MY STUFF
-                        </a>
+                        </a> */}
+                        <Link to="/portfolio" className="btn">SEE MY STUFF</Link>
                     {/*    replace above with Link component for portfolio*/}
                     </div>
                     <div className="social-buttons">

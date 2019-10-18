@@ -5,7 +5,7 @@ let siteMetadata = {
     icon: `/images/icon.png`,
     titleImage: `/images/wall.jpg`,
     introTag: `DEVELOPER | CREATOR`,
-    description: `Mark Did developer portfolio and blog. Currently focusing on React JS and React Native`,
+    description: `Mark Did - developer portfolio and blog. Currently focusing on React JS and React Native`,
     author: `@markdid`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
@@ -53,7 +53,12 @@ let siteMetadata = {
         {
             name: "Youtube",
             icon: "/images/Youtube.svg",
-            url: "https://www.youtube.com/channel/UCj__cqxqkDL-E_mpjoqkIFg"
+            url: "https://www.youtube.com/channel/UCbowPYAYlTA06EZPRIpGKZQ?view_as=subscriber"
+        },
+        {
+            name: "Github",
+            icon: "/images/github.svg",
+            url: "https://github.com/markdid"
         }
     ],
     contact: {
@@ -102,26 +107,19 @@ module.exports = {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
-                    {
-                        resolve: `gatsby-transformer-remark`,
-                        options: {
-                            plugins: [
-                                `gatsby-remark-emoji`,  // <-- this line adds emoji
-                                {
-                                    resolve: "gatsby-remark-embed-youtube",
-                                    options: {
-                                        width: 800,
-                                        height: 400
-                                    }
-                                }
-                            ]
-                        }
-                    },
                     "gatsby-remark-copy-linked-files",
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 1280
+                        }
+                    },
+                    `gatsby-remark-emoji`,  // <-- this line adds emoji
+                    {
+                        resolve: "gatsby-remark-embed-youtube",
+                        options: {
+                            width: 800,
+                            height: 400
                         }
                     }
                 ]
