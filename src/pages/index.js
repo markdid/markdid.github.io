@@ -3,17 +3,116 @@ import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import SocialLinks from "../components/sociallinks";
-import PortfolioList from "../components/list-portfolio";
+// import PortfolioList from "../components/list-portfolio";
 import BlogList from "../components/list-blog";
-import Contact from "../components/contact";
+// import Contact from "../components/contact";
 import "../style/wall.less";
+import Particles from 'react-particles-js'
+
 //cloudinary
+let particlesOptions = {
+"particles": {
+    "number": {
+    "value": 130,
+    "density": {
+        "enable": true,
+        "value_area": 800
+    }
+    },
+    "color": {
+    "value": "#357793"
+    },
+    "shape": {
+    "type": "triangle",
+    "stroke": {
+        "width": 0,
+        "color": "#000000"
+    },
+    "polygon": {
+        "nb_sides": 5
+    }
+    },
+    "opacity": {
+    "value": 0.12,
+    "random": false,
+    "anim": {
+        "enable": false,
+        "speed": 0.24678561733422155,
+        "opacity_min": 0.1,
+        "sync": false
+    }
+    },
+    "size": {
+    "value": 3,
+    "random": true,
+    "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+    }
+    },
+    "line_linked": {
+    "enable": true,
+    "distance": 150,
+    "color": "#ffffff",
+    "opacity": 0.30,
+    "width": 1
+    },
+    "move": {
+    "enable": true,
+    "speed": 1.6241544246026904,
+    "direction": "none",
+    "random": false,
+    "straight": false,
+    "out_mode": "out",
+    "bounce": false,
+    "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+    }
+    }
+},
+"interactivity": {
+    "detect_on": "canvas",
+    "events": {
+    "onhover": {
+        "enable": true,
+        "mode": "grab"
+    },
+    "onclick": {
+        "enable": true,
+        "mode": "push"
+    },
+    "resize": true
+    },
+    "modes": {
+    "grab": {
+        "distance": 185.08921300066618,
+        "line_linked": {
+        "opacity": 0.3167088945192694
+        }
+    },
+    "repulse": {
+        "distance": 24.678561733422153,
+        "duration": 0.4
+    },
+    "push": {
+        "particles_nb": 4
+    }
+    }
+},
+"retina_detect": true
+};
 
 class IndexPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            winHeight: "100vh"
+            winHeight: "100vh",
+            // particleOptions: particlesOptions,
+            // darkMode: this.props.data.site.siteMetadata.darkmode
         };
     }
 
@@ -24,6 +123,16 @@ class IndexPage extends React.Component {
     }
 
     componentDidMount() {
+        //check dark mode -> particle
+        // let darkMode = localStorage.getItem("darkMode") || this.state.darkMode;
+        // if (darkMode) {
+        //     this.setState({
+        //         darkMode: (darkMode === "false")
+        //     }, () => {
+        //         this.setState({particleOptions: whiteMode});
+        //     })
+        // }
+
         this.setWindowHeight();
         let _this = this;
         window.addEventListener("resize", function() {
@@ -75,12 +184,17 @@ class IndexPage extends React.Component {
                     lang="en"
                     title={this.props.data.site.siteMetadata.title}
                 />
+                
                 <div
                     className="wall"
-                    style={{ height: this.state.winHeight + "px" }}
+                    style={{ height: this.state.winHeight + "px", }}
                 >
-                    <div className="intro container">
-                        <div className="main-title text-primary">
+                    <Particles className="particles" params={particlesOptions}></Particles>
+                    <div className="intro container" style={{zIndex: 1}}>
+                        {/* particles!!! */}
+                        
+                        <div className="main-title text-primary" style={{backgroundColor: "#ffffff00"}}>
+                        
                             <svg
                                 width="90%"
                                 height="220px"
@@ -101,7 +215,7 @@ class IndexPage extends React.Component {
                                     <rect
                                         x="0"
                                         y="0"
-                                        className="fill-primary"
+                                        className=""
                                         width="100"
                                         height="100"
                                     />
@@ -126,6 +240,7 @@ class IndexPage extends React.Component {
                                               .title}
                                 </text>
                             </svg>
+                            
                         </div>
                         <p className="tag-line text-secondary">
                             {this.props.data.site.siteMetadata.introTag}
@@ -136,12 +251,15 @@ class IndexPage extends React.Component {
                         {/* <a href="https://github.com/markdid" className="btn">
                             SEE MY STUFF
                         </a> */}
-                        <Link to="/portfolio" className="btn">SEE MY STUFF</Link>
+                        <Link to="/portfolio" className="btn zAbove">SEE MY STUFF</Link>
                     {/*    replace above with Link component for portfolio*/}
+                    
                     </div>
+                    
                     <div className="social-buttons">
-                        <SocialLinks />
+                        <SocialLinks /> 
                     </div>
+                    
                 </div>
                 {/*<PortfolioList />*/}
                 <BlogList />
@@ -158,6 +276,7 @@ export const query = graphql`
         site {
             siteMetadata {
                 title
+                darkmode
                 capitalizeTitleOnHome
                 titleImage
                 introTag
