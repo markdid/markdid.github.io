@@ -9,7 +9,6 @@ import BlogList from "../components/list-blog";
 import "../style/wall.less";
 import Particles from 'react-particles-js'
 
-//cloudinary
 let particlesOptions = {
 "particles": {
     "number": {
