@@ -1,5 +1,5 @@
 ---
-title: Event Scheduler (beta)
+title: Event Manager
 description: Event scheduler used by the BYU Law School for scheduling events and tours.
 date: 2019-11-02
 template: portfolio

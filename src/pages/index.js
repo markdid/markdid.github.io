@@ -10,99 +10,99 @@ import "../style/wall.less";
 import Particles from 'react-particles-js'
 
 let particlesOptions = {
-"particles": {
-    "number": {
-    "value": 130,
-    "density": {
-        "enable": true,
-        "value_area": 800
-    }
-    },
-    "color": {
-    "value": "#357793"
-    },
-    "shape": {
-    "type": "triangle",
-    "stroke": {
-        "width": 0,
-        "color": "#000000"
-    },
-    "polygon": {
-        "nb_sides": 5
-    }
-    },
-    "opacity": {
-    "value": 0.12,
-    "random": false,
-    "anim": {
-        "enable": false,
-        "speed": 0.24678561733422155,
-        "opacity_min": 0.1,
-        "sync": false
-    }
-    },
-    "size": {
-    "value": 3,
-    "random": true,
-    "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-    }
-    },
-    "line_linked": {
-    "enable": true,
-    "distance": 150,
-    "color": "#ffffff",
-    "opacity": 0.30,
-    "width": 1
-    },
-    "move": {
-    "enable": true,
-    "speed": 1.6241544246026904,
-    "direction": "none",
-    "random": false,
-    "straight": false,
-    "out_mode": "out",
-    "bounce": false,
-    "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-    }
-    }
-},
-"interactivity": {
-    "detect_on": "canvas",
-    "events": {
-    "onhover": {
-        "enable": true,
-        "mode": "grab"
-    },
-    "onclick": {
-        "enable": true,
-        "mode": "push"
-    },
-    "resize": true
-    },
-    "modes": {
-    "grab": {
-        "distance": 185.08921300066618,
+    "particles": {
+        "number": {
+            "value": 130,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#357793"
+        },
+        "shape": {
+            "type": "triangle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            }
+        },
+        "opacity": {
+            "value": 0.12,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 0.24678561733422155,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
         "line_linked": {
-        "opacity": 0.3167088945192694
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.30,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 1.6241544246026904,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
         }
     },
-    "repulse": {
-        "distance": 24.678561733422153,
-        "duration": 0.4
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "grab"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 185.08921300066618,
+                "line_linked": {
+                    "opacity": 0.3167088945192694
+                }
+            },
+            "repulse": {
+                "distance": 24.678561733422153,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            }
+        }
     },
-    "push": {
-        "particles_nb": 4
-    }
-    }
-},
-"retina_detect": true
+    "retina_detect": true
 };
 
 class IndexPage extends React.Component {
@@ -134,7 +134,7 @@ class IndexPage extends React.Component {
 
         this.setWindowHeight();
         let _this = this;
-        window.addEventListener("resize", function() {
+        window.addEventListener("resize", function () {
             _this.setWindowHeight();
         });
         let sWidth = this.svg.clientWidth,
@@ -145,7 +145,7 @@ class IndexPage extends React.Component {
             let tInnerText = tText.innerHTML;
             if (tInnerText.split(" ").length > 1) {
                 tText.innerHTML = "";
-                tInnerText.split(" ").forEach(function(e, i) {
+                tInnerText.split(" ").forEach(function (e, i) {
                     let tSpan = _this.createSVGElement("tspan", {
                         dy: i === 0 ? "0em" : ".8em",
                         x: "50"
@@ -153,7 +153,7 @@ class IndexPage extends React.Component {
                     tSpan.innerHTML = e;
                     tText.appendChild(tSpan);
                 });
-                setTimeout(function() {
+                setTimeout(function () {
                     _this.svg.style.height =
                         tText.getBoundingClientRect().height + 70;
                     _this.svg.style.margin = "15px auto";
@@ -183,17 +183,17 @@ class IndexPage extends React.Component {
                     lang="en"
                     title={this.props.data.site.siteMetadata.title}
                 />
-                
+
                 <div
                     className="wall"
                     style={{ height: this.state.winHeight + "px", }}
                 >
                     <Particles className="particles" params={particlesOptions}></Particles>
-                    <div className="intro container" style={{zIndex: 1}}>
+                    <div className="intro container" style={{ zIndex: 1 }}>
                         {/* particles!!! */}
-                        
-                        <div className="main-title text-primary" style={{backgroundColor: "#ffffff00"}}>
-                        
+
+                        <div className="main-title text-primary" style={{ backgroundColor: "#ffffff00" }}>
+
                             <svg
                                 width="90%"
                                 height="220px"
@@ -236,10 +236,10 @@ class IndexPage extends React.Component {
                                         .capitalizeTitleOnHome
                                         ? this.props.data.site.siteMetadata.title.toUpperCase()
                                         : this.props.data.site.siteMetadata
-                                              .title}
+                                            .title}
                                 </text>
                             </svg>
-                            
+
                         </div>
                         <p className="tag-line text-secondary">
                             {this.props.data.site.siteMetadata.introTag}
@@ -251,14 +251,14 @@ class IndexPage extends React.Component {
                             SEE MY STUFF
                         </a> */}
                         <Link to="/portfolio" className="btn zAbove">SEE MY STUFF</Link>
-                    {/*    replace above with Link component for portfolio*/}
-                    
+                        {/*    replace above with Link component for portfolio*/}
+
                     </div>
-                    
+
                     <div className="social-buttons">
-                        <SocialLinks /> 
+                        <SocialLinks />
                     </div>
-                    
+
                 </div>
                 {/*<PortfolioList />*/}
                 <BlogList />
