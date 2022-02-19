@@ -15,9 +15,17 @@ I'm currently a computer science student at BYU. I work as a web developer using
 ## EXPERIENCE
 ***
 
+##### Software Engineer - Hall Labs
+
+Provo, Utah — July 2020 - Present
+
+- Developing software solutions at Hall Labs. Created GVWR, the truck and trailer towing tool as well as the "Payload" Truck Load Calculator available on iOS and Android. Built with React Native.
+Developing updates for BetterWeigh - Mobile Towing Scale on iOS in Swift.
+- Creating new hardware solutions for mobile towing scales on commercial vehicles as a systems engineer. Experience with embedded systems, electronic circuits, and C programming.
+
 ##### Web Developer - BYU Law School
 
-Provo, Utah — June 2019 - Present
+Provo, Utah — June 2019 - July 2020
 
 - I create internal web applications for the BYU law school technologies
 including ReactJS, FeathersJS, and Python
