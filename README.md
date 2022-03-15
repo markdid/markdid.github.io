@@ -9,9 +9,7 @@ Elemental is a portfolio template suitable for artists, photographers, designers
 
 ## Getting Started.
 
-You will need node and [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) installed.
-
-Start the project by 
+Most technology dev icons are found at https://devicon.dev/
 
 ```
 gatsby new project-name https://github.com/akzhy/gatsby-starter-elemental
@@ -165,8 +163,3 @@ The "About" page is created as a miscellaneous post.
 ## Contributing
 
 Any kind of contributions are welcome. Bump the version and create a PR.
-
-
-
-
-

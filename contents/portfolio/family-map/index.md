@@ -3,7 +3,7 @@ title: Ancestry Map
 description: This is a project I did to learn server-side java and react native. The backend randomly generates recursive family tree's and the front end displays that information in a map with filters, search abilities, etc.
 date: 2020-04-18
 template: portfolio
-technologies: ["Java", "ReactJS", "Expo", "Android", "Apple"] 
+technologies: ["Java", "ReactJS", "Expo"] 
 image: ./mockup_large.png
 ---
 [row]
